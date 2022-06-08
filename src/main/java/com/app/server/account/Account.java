@@ -1,18 +1,17 @@
-package com.app.account.account;
+package com.app.server.account;
 
 import com.google.gson.Gson;
 
 import java.util.Date;
 
 public class Account {
-
     private String username;
     private String password;
     private String email;
     private Date dateCreated;
     private Date lastLogin;
 
-    private boolean isLogin;
+    private boolean isOnline;
 
     public Account() {
     }
@@ -29,12 +28,12 @@ public class Account {
         this.dateCreated = new Date(System.currentTimeMillis());
     }
 
-    public boolean isLogin() {
-        return isLogin;
+    public boolean isOnline() {
+        return isOnline;
     }
 
-    public void setLogin(boolean login) {
-        isLogin = login;
+    public void setOnline(boolean online) {
+        isOnline = online;
     }
 
     public String getUsername() {

@@ -1,6 +1,6 @@
 package com.app.main.helper;
 
-import com.app.account.account.Account;
+import com.app.server.account.Account;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.app.account.management;
 
-import com.app.account.account.Account;
+import com.app.server.account.Account;
 import com.app.constant.PathConstants;
 import com.app.main.helper.AccountMapper;
 import com.app.main.helper.UserInput;

@@ -1,6 +1,6 @@
 package com.app.utils;
 
-import com.app.account.account.Account;
+import com.app.server.account.Account;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -59,5 +59,23 @@ public class FileUtils {
 //            System.err.println("An error occurred.");
             e.printStackTrace();
         }
+    }
+
+    public String getMessageContent() {
+        List<String> messageContent = new ArrayList<>();
+        messageContent.add("A");
+        messageContent.add("B");
+        messageContent.add("C");
+        messageContent.add("D");
+        messageContent.add("E");
+        messageContent.add("F");
+        String total = "";
+        total = messageContent.stream().map((x) -> x + "|").reduce(total, String::concat);
+        return total;
+    }
+
+    public static void main(String[] args) {
+        FileUtils fileUtils = new FileUtils();
+        System.out.println(fileUtils.getMessageContent());
     }
 }
