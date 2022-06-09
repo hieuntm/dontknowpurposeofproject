@@ -94,31 +94,6 @@ public final class ServerMain {
         }
     }
 
-//    private synchronized void loadOfflineMessage() {
-//        // Kiểm tra file chưa danh sách offline message có tồn tại trước khi load
-//        if (new File("offline_message.data").exists()) {
-//            try {
-//                try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("offline_message.data"))) {
-//                    listOfflineMessage = (HashMap<String, ListOfflineMessage>) ois.readObject();
-//                }
-//            } catch (FileNotFoundException ex) {
-//            } catch (IOException | ClassNotFoundException ex) {
-//            }
-//            return;
-//        }
-//        // Nếu file không tồn tại tạo mới danh sách file
-//        listOfflineMessage = new HashMap<>();
-//    }
-
-//    private synchronized void saveOfflineMessage() {
-//        try {
-//            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("offline_message.data"))) {
-//                oos.writeObject(listOfflineMessage);
-//            }
-//        } catch (IOException ex) {
-//        }
-//    }
-
     private synchronized void loadAccount() {
         // Kiểm tra file chưa danh sách tài khoản có tồn tại trước khi load
         if (new File("account.data").exists()) {
@@ -200,6 +175,32 @@ public final class ServerMain {
 //        }
 //        saveOfflineMessage();
 //    }
+
+    //    private synchronized void loadOfflineMessage() {
+//        // Kiểm tra file chưa danh sách offline message có tồn tại trước khi load
+//        if (new File("offline_message.data").exists()) {
+//            try {
+//                try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("offline_message.data"))) {
+//                    listOfflineMessage = (HashMap<String, ListOfflineMessage>) ois.readObject();
+//                }
+//            } catch (FileNotFoundException ex) {
+//            } catch (IOException | ClassNotFoundException ex) {
+//            }
+//            return;
+//        }
+//        // Nếu file không tồn tại tạo mới danh sách file
+//        listOfflineMessage = new HashMap<>();
+//    }
+
+//    private synchronized void saveOfflineMessage() {
+//        try {
+//            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("offline_message.data"))) {
+//                oos.writeObject(listOfflineMessage);
+//            }
+//        } catch (IOException ex) {
+//        }
+//    }
+
 //
 //    public synchronized ListOfflineMessage getOfflineMessage(String usr) {
 //        ListOfflineMessage listMess = listOfflineMessage.get(usr);

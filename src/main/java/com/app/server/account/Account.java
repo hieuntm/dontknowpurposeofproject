@@ -2,9 +2,10 @@ package com.app.server.account;
 
 import com.google.gson.Gson;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Account {
+public class Account implements Serializable {
     private String username;
     private String password;
     private String email;

@@ -1,4 +1,4 @@
-package com.app.main.helper;
+package com.app.helper;
 
 import com.app.server.account.Account;
 

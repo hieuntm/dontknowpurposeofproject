@@ -1,7 +1,5 @@
 package com.app.server;
 
-import com.app.main.Run;
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -112,13 +110,13 @@ public class ServerThread implements Runnable {
             while (true) {
                 // Khi có request sẽ phân loại request tương ứng và xử lý cụ thể tùy trường hợp.
                 if ((request = (String[]) ois.readObject()) != null) {
-                    // Xử lý đăng ký
-                    if (request[0].equals("register-request")) {
-                        processRegisterRequest(request);
-                    }
                     // Xử lý đăng nhập
                     if (request[0].equals("login-request")) {
                         processLoginRequest(request);
+                    }
+                    // Xử lý đăng ký
+                    if (request[0].equals("register-request")) {
+                        processRegisterRequest(request);
                     }
                     // Khởi tạo dữ liệu sau khi đăng nhập thành công
                     if (request[0].equals("set-user-name")) {

@@ -60,22 +60,4 @@ public class FileUtils {
             e.printStackTrace();
         }
     }
-
-    public String getMessageContent() {
-        List<String> messageContent = new ArrayList<>();
-        messageContent.add("A");
-        messageContent.add("B");
-        messageContent.add("C");
-        messageContent.add("D");
-        messageContent.add("E");
-        messageContent.add("F");
-        String total = "";
-        total = messageContent.stream().map((x) -> x + "|").reduce(total, String::concat);
-        return total;
-    }
-
-    public static void main(String[] args) {
-        FileUtils fileUtils = new FileUtils();
-        System.out.println(fileUtils.getMessageContent());
-    }
 }

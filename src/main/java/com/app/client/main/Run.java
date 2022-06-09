@@ -1,4 +1,4 @@
-package com.app.main;
+package com.app.client.main;
 
 public class Run {
 
